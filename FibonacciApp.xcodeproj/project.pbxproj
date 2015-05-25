@@ -13,6 +13,7 @@
 		4D443BBE1B11A9E800B35EC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D443BBD1B11A9E800B35EC8 /* Images.xcassets */; };
 		4D443BC11B11A9E800B35EC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D443BBF1B11A9E800B35EC8 /* LaunchScreen.xib */; };
 		4D443BCD1B11A9E800B35EC8 /* FibonacciAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D443BCC1B11A9E800B35EC8 /* FibonacciAppTests.swift */; };
+		4D443BD71B11FF2B00B35EC8 /* FibonacciSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D443BD61B11FF2B00B35EC8 /* FibonacciSequence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		4D443BC61B11A9E800B35EC8 /* FibonacciAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FibonacciAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D443BCB1B11A9E800B35EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D443BCC1B11A9E800B35EC8 /* FibonacciAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciAppTests.swift; sourceTree = "<group>"; };
+		4D443BD61B11FF2B00B35EC8 /* FibonacciSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciSequence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				4D443BBD1B11A9E800B35EC8 /* Images.xcassets */,
 				4D443BBF1B11A9E800B35EC8 /* LaunchScreen.xib */,
 				4D443BB41B11A9E800B35EC8 /* Supporting Files */,
+				4D443BD61B11FF2B00B35EC8 /* FibonacciSequence.swift */,
 			);
 			path = FibonacciApp;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D443BD71B11FF2B00B35EC8 /* FibonacciSequence.swift in Sources */,
 				4D443BB91B11A9E800B35EC8 /* ViewController.swift in Sources */,
 				4D443BB71B11A9E800B35EC8 /* AppDelegate.swift in Sources */,
 			);
