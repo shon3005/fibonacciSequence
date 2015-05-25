@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let anotherSequence = FibonacciSequence(numberOfItemsInSequence: 2, includesZero: true)
+    var fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: 2, includesZero: true)
     
     @IBOutlet var textView:UITextView?
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.updateFibonacciSequence()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,9 +34,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateFibonacciSequence() {
-        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(numberOfItemsSlider.value), includesZero: includesZeroSwitch.on)
+        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(numberOfItemsSlider.value), includesZero: includesZeroSwitch.on))
     
         textView.text = fibonacciSequence.values.description
+        
+        if includesZeroSwitch.on {
+            includesZeroLabel.text = "Yes"
+        }
+        else {
+            includesZeroLabel.text = "No"
+        }
     }
     
 
