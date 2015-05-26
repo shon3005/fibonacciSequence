@@ -9,18 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var textView:UITextView!
+    
+    @IBOutlet weak var includesZeroSwitch:UISwitch!
+    
+    @IBOutlet weak var includesZeroLabel:UILabel!
+    
+    @IBOutlet weak var numberOfItemsLabel:UILabel!
+    
+    @IBOutlet weak var numberOfItemsSlider:UISlider!
+    
     var fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: 2, includesZero: true)
-    
-    @IBOutlet var textView:UITextView?
-    
-    @IBOutlet var includesZeroSwitch:UISwitch?
-    
-    @IBOutlet var includesZeroLabel:UILabel?
-    
-    @IBOutlet var numberOfItemsLabel:UILabel?
-    
-    @IBOutlet var numberOfItemsSlider:UISlider?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,19 +34,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func updateFibonacciSequence() {
-        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(numberOfItemsSlider.value), includesZero: includesZeroSwitch.on))
+        
+        fibonacciSequence = FibonacciSequence(numberOfItemsInSequence: UInt(numberOfItemsSlider.value), includesZero: includesZeroSwitch.on)
     
         textView.text = fibonacciSequence.values.description
         
+        includesZeroLabel.text = includesZeroSwitch.on ? "Yes":"No"
+        
+        numberOfItemsLabel.text = String(Int(numberOfItemsSlider.value))
+        
         if includesZeroSwitch.on {
-            includesZeroLabel.text = "Yes"
+            numberOfItemsSlider.maximumValue = 94
         }
         else {
-            includesZeroLabel.text = "No"
+            numberOfItemsSlider.maximumValue = 93
         }
     }
-    
-
 }
 
 
